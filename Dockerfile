@@ -6,11 +6,8 @@ RUN apk update && \
     apk add --no-cache --virtual .build-deps \
         ca-certificates \
         curl \
-        tar
-
-RUN apt-get update && \
-    apt-get install -y curl git && \
-    apk add github-cli
+        tar \
+        github-cli
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
