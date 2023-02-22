@@ -10,9 +10,7 @@ echo "The repository name is $GITHUB_REPOSITORY"
 
 export GH_HOST=GitHub.com
 
-export GH_ENTERPRISE_TOKEN=$GITHUB_TOKEN
-
-gh auth login
+gh auth login --with-token $GITHUB_TOKEN
 
 gh api \
 -H "Accept: application/vnd.github+json" \
